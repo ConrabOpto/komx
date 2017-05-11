@@ -28,10 +28,9 @@ For react bindings, see `komx-react`.
 
 ## Usage
 
-## Utility methods
+```js
+import { observable, computed } from 'komx';
 
-### When
 
-### fromPromise
+```
 
-## License
