@@ -1,10 +1,10 @@
 {
   "name": "komx",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "description": "State management similar to Mobx, based on Knockout observables.",
   "files": [
-    "dist/"
+    "dist/**"
   ],
   "main": "dist/komx.umd.js",
   "module": "dist/komx.es.js",
