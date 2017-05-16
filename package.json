@@ -1,6 +1,6 @@
 {
   "name": "komx",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "description": "State management similar to Mobx, based on Knockout observables.",
   "main": "dist/komx.js",
@@ -16,7 +16,6 @@
     "url": "https://github.com/ConrabOpto/komx"
   },
   "author": "Conrab Opto",
-  "license": "MIT",
   "peerDependencies": {
     "knockout": "^3.0.0"
   },
