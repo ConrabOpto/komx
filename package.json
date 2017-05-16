@@ -1,12 +1,12 @@
 {
   "name": "komx",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "description": "State management similar to Mobx, based on Knockout observables.",
   "files": [
-    "dist"
+    "dist/"
   ],
-  "main": "dist/komx.js",
+  "main": "dist/komx.umd.js",
   "module": "dist/komx.es.js",
   "scripts": {
     "prepublish": "set BABEL_ENV=production&& rollup -c",
