@@ -1,6 +1,6 @@
 import ko from 'knockout';
 import when from '../src/when';
-import { action, computed, observable } from '../src/decorators';
+import { computed, observable } from '../src/decorators';
 
 const api = {
     init() {
