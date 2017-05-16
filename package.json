@@ -3,6 +3,9 @@
   "version": "0.0.2",
   "license": "MIT",
   "description": "State management similar to Mobx, based on Knockout observables.",
+  "files": [
+    "dist"
+  ],
   "main": "dist/komx.js",
   "module": "dist/komx.es.js",
   "scripts": {
