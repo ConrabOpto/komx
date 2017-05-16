@@ -1,15 +1,21 @@
 {
   "name": "komx",
-  "version": "1.0.0",
+  "version": "0.0.1",
+  "license": "MIT",
   "description": "State management similar to Mobx, based on Knockout observables.",
   "main": "dist/komx.js",
   "module": "dist/komx.es.js",
   "scripts": {
+    "prepublish": "set BABEL_ENV=production&& rollup -c",
     "test": "jest --watch",
     "build": "set BABEL_ENV=production&& rollup -c",
     "dev": "set BABEL_ENV=production&& rollup -c -w"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ConrabOpto/komx"
+  },
+  "author": "Conrab Opto",
   "license": "MIT",
   "peerDependencies": {
     "knockout": "^3.0.0"
