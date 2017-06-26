@@ -1,6 +1,5 @@
 /* eslint-disable prefer-spread, prefer-rest-params */
 import ko from 'knockout';
-import debugging from './debugging';
 import { isNil, isUndefined } from './utils';
 
 const isDefined = val => !isUndefined(val);
@@ -15,22 +14,6 @@ function addToRawObservables(target, key, obs) {
 
 function namedActionDecorator(name) {
     return function (target, key, descriptor) {
-        if (!__DEV__) {
-            return descriptor;
-        }
-
-        const fn = descriptor.value;
-        descriptor.value = function (...args) {
-            const constructorName = target.constructor ? target.constructor.name : '';
-            debugging.reporter({
-                fn,
-                args,
-                type: 'action',
-                name: `${constructorName} ${name}`,
-                context: target
-            });
-            fn.apply(this, arguments);
-        };
         return descriptor;
     };
 }
