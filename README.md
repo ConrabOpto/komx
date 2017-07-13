@@ -22,7 +22,7 @@ Komx simply acts like a bridge between the two libraries.
 
 `npm install komx --save`
 
-For react bindings, see `komx-react`.
+For react bindings, see [komx-react](https://github.com/ConrabOpto/komx-react).
 
 ## Usage
 
