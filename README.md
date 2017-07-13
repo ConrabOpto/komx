@@ -16,7 +16,7 @@ and two-way data binding.
 
 Komx is a thin layer around Knockout observables that tries to mimic the api of Mobx as much as
 possible. Observables and computeds are conceptually very similar between Knockout and Mobx -
-this library simply acts like a bridge between the two libraries.
+Komx simply acts like a bridge between the two libraries.
 
 ## Installation
 
@@ -39,7 +39,7 @@ class Note {
     }
 
     constructor(data) {
-        Object.assing(this, data);
+        Object.assign(this, data);
     }
 }
 ```
