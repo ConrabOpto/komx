@@ -1,6 +1,6 @@
 {
   "name": "komx",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "license": "MIT",
   "description": "State management similar to Mobx, based on Knockout observables.",
   "files": [
