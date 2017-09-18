@@ -31,6 +31,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "jest": "^19.0.2",
     "jest-babel": "^1.0.1",
+    "knockout": "^3.4.2",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-node-resolve": "^3.0.0",

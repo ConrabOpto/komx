@@ -36,14 +36,24 @@ function getInitValue(init) {
 
 export function observable(prototype, key, desc) {
     const initValue = getInitValue(desc.initializer);
-
     if (Array.isArray(initValue)) {
-        return observableArray(prototype, key, initValue);
+        return {
+            get() {
+                defObservableArray(this, key, getInitValue(desc.initializer));
+                return this[key];
+            },
+            set(value) {
+                defObservableArray(this, key, getInitValue(desc.initializer));
+                this[key] = value;
+            },
+            enumerable: true,
+            configurable: true
+        };
     }
 
     const newDescriptor = {
         get() {
-            const obs = ko.observable(initValue);
+            const obs = ko.observable(getInitValue(desc.initializer));
             addToRawObservables(this, key, obs);
             defProp(this, key, {
                 configurable: true,
@@ -54,7 +64,7 @@ export function observable(prototype, key, desc) {
             return obs();
         },
         set(value) {
-            value = isDefined(initValue) && isNil(value) ? initValue : value;
+            value = isDefined(initValue) && isNil(value) ? getInitValue(desc.initializer) : value;
             const obs = ko.observable();
             addToRawObservables(this, key, obs);
             defProp(this, key, {
@@ -125,21 +135,4 @@ function defObservableArray(instance, key, initValue) {
             obsArray(array);
         }
     });
-}
-
-function observableArray(prototype, key, initValue) {
-    const newDescriptor = {
-        get() {
-            defObservableArray(this, key, initValue);
-            return this[key];
-        },
-        set(value) {
-            defObservableArray(this, key, initValue);
-            this[key] = value;
-        },
-        enumerable: true,
-        configurable: true
-    };
-
-    return newDescriptor;
 }
